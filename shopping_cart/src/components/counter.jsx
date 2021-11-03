@@ -3,7 +3,7 @@ import React, { Component } from "react"; // Importing Component class from Reac
 class Counter extends React.Component {
   // Counter class is subclass of Component //cc
   state = {
-    count: 1,
+    count: this.props.value,
   };
   style = {
     fontSize: 20,
@@ -12,17 +12,18 @@ class Counter extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div>
         <span style={{ fontSize: 15 }} className={this.getState()}>
           {this.formatCount()}
         </span>
         <button
           style={{ fontSize: 15, fontWeight: "bold" }}
           className="btn-primary btn-sm"
+          onClick={() => this.increase()}
         >
           Increment
         </button>
-      </React.Fragment>
+      </div>
     );
   }
   getState() {
@@ -30,6 +31,9 @@ class Counter extends React.Component {
     stats += this.state.count === 0 ? "bg-warning" : "bg-primary";
     return stats;
   }
+  increase = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
 
   formatCount() {
     // const { count } = this.state;
