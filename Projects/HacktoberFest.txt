@@ -1,0 +1,13 @@
+#f74700 -  Orange
+
+#b53a25 -  Dark Orange
+
+#a88770 -  Light Brown
+
+#2b3531 -  Black
+
+#f4f0e1 -  Cream White
+
+#b8cdb3 - Off Light Green
+
+
